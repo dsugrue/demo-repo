@@ -1,0 +1,50 @@
+---
+title: "Lab 6"
+author: "Danielle Sugrue"
+date: "10/3/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# with "base" read.csv()
+dat <- read.csv('../data/nba2018-players.csv', stringsAsFactors = FALSE)
+library(dplyr)
+library(ggplot2)
+```
+
+##Manipulating and Visualizing Data Frames
+
+```{r, eval=FALSE}
+#Open a shell terminal (e.g. command line or GitBash)
+#Change your working directory to a location where you will store all the materials for this lab
+$ cd Desktop
+$ cd Stat133
+$ cd labs-stat133
+#Use mkdir to create a directory lab06
+$ mkdir lab06
+#cd to lab06
+$ cd lab06
+#Use mkdir to create other subdirectories: data, code, output, images
+$ mkdir data
+$ mkdir code
+$ mkdir output
+$ mkdir images
+#List the contents of lab06 to confirm that you have all the subdirectories
+$ ls
+#Use touch to create an empty README.md text file.
+$ touch README.md
+#Open the README.md file with a text editor (e.g. the one in RStudio) and add a brief description of what this lab is about. Save the changes.
+# cd to data/
+$ cd data
+#Download the data file with the command curl
+$ curl -O https://raw.githubusercontent.com/ucb-stat133/stat133-fall-2018/master/data/nba2018-players.csv
+#Use ls to confirm that the csv file is in data/
+$ ls
+#Use word count wc to count the lines of the csv file
+$ wc -l nba2018-players.csv #returns 478 lines
+#Take a peek at the first rows of the csv file with head
+$ head nba2018-players.csv
+#Take a peek at the last 5 rows of the csv file with tail
+$ tail -5 nba2018-players.csv
+```
